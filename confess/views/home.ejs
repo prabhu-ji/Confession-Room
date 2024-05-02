@@ -1,0 +1,53 @@
+<%- include('partials/header') %>
+
+<style>
+  .jumbotron {
+    background-color: transparent;
+    color: #ffffff;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .confessions-heading {
+    font-size: 80px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #f8f9fa;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+    margin-top: 20px;
+  }
+
+  .btn-light {
+    background-color: #ffffff;
+    color: #6c757d;
+  }
+
+  .btn-dark {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+</style>
+
+<div class="jumbotron centered">
+  <div class="container">
+    <h1 class="confessions-heading">Confession Room</h1>
+    <p class="lead">Share your confessions anonymously!</p>
+    <hr>
+    <a class="btn btn-light btn-lg" href="/register" role="button">Register</a>
+    <a class="btn btn-dark btn-lg" href="/login" role="button">Login</a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

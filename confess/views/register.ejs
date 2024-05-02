@@ -1,0 +1,110 @@
+<%- include('partials/header') %>
+
+<style>
+  .register-heading {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 80px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  .main-content {
+    padding-top: 20px;
+  }
+
+  .form-group label {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+  }
+
+  .form-control:focus {
+    border-color: #333;
+    box-shadow: none;
+  }
+
+  .google-signin {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .btn-google {
+    background-color: #fff;
+    color: #333;
+    border-color: #ccc;
+  }
+
+  .google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    margin-top: 20px;
+  }
+
+  .google-btn i {
+    margin-right: 10px;
+    color: #ffffff;
+  }
+
+  .google-btn span {
+    color: #ffffff;
+  }
+
+  .or-text {
+    color: #888888;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .center-btn { /* Adjust button alignment */
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Increase margin-top for better spacing */
+  }
+</style>
+
+<div class="container mt-5">
+  <h1 class="register-heading">REGISTER</h1>
+
+  <div class="main-content">
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+
+            <!-- Makes POST request to /register route -->
+            <form action="/register" method="POST">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="username" placeholder="Enter your email">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Enter your password">
+              </div>
+              <div class="form-group center-btn"> <!-- Ensure the button is centered -->
+                <button type="submit" class="btn btn-dark btn-block">Register</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="google-signin">
+    <p class="or-text">OR</p>
+    <a class="google-btn" href="/auth/google" role="button">
+      <i class="fab fa-google"></i>
+      <span>Sign Up with Google</span>
+    </a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

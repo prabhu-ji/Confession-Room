@@ -1,0 +1,62 @@
+<%- include('partials/header') %>
+
+<style>
+  .container {
+    margin-top: 100px; 
+  }
+
+  .jumbotron {
+    background-color: transparent;
+    color: #ffffff;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .confession-room-heading {
+    font-size: 80px; 
+    text-align: center;
+    color: #ffffff; 
+    text-transform: uppercase;
+    margin-bottom: 50px; 
+    margin-top: 20px; 
+  }
+
+  .display-3 {
+    font-size: 3.5rem; 
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif; 
+    color: #f8f9fa; 
+  }
+
+  .secret-text {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #f8f9fa; 
+  }
+
+  .form-control {
+    font-size: 1.25rem;
+  }
+
+  .btn-submit {
+    font-size: 1rem; 
+    padding: 8px 16px; 
+    margin-top: 20px; 
+  }
+</style>
+
+<div class="container">
+  <div class="jumbotron centered">
+    <h1 class="confession-room-heading">Confession Room</h1>
+    <p class="secret-text">Share your confessions anonymously!</p>
+
+    <form action="/submit" method="POST">
+      <div class="form-group">
+        <textarea class="form-control text-center" name="secret" rows="10" placeholder="Share your confession here"></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark btn-submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
